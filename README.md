@@ -1,10 +1,21 @@
- 1. Modify build-docker-image.sh following instructions in that file
- 2. run it. Visit localhost:8080 - enjoy working cakephp!
- 3. You can use start-container.sh and stop-container.sh for starting and
-stopping the container.
- 4. You can remove all traces of docker images from your system (useful for debug)
- by running remove-all-docker-stuff.sh.
- 5. Enjoy!
- nb. Not fully figured out MySQL stuff yet, but this is based heavily on
- (and basically is a slightly modified clone of) https://github.com/QuantumObject/docker-cakephp
- and there are some instructions there. Feel free to fix and commit.
+0. Install docker. This has only been tested on Mac and Linux. 
+
+1. Make sure you clone champions-deploy.
+
+2. Modify build-docker-image.sh following instructions in file.
+
+3. Run make-new-db.sh
+
+4. Run build-docker-image.sh
+
+5. run the following commands within your champions-deploy folder: "chmod 777 log/" "chmod 777 tmp/"
+
+6. run the following command anywhere "(sudo) docker exec -it champions-container bash"
+
+7. Within the new bash shell, run the following command "cd /var/www && cake/bin migrations migrate"
+
+(you can exit out of this by typing exit)
+
+8. Go read into Docker if you need more info :) - The site is accessible on localhost:8080. You will need to do something like "sudo docker ps" "sudo docker start" etc when rebooting
+
+
