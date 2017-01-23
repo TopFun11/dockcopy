@@ -12,6 +12,6 @@ then
     # Delete all containers
     sudo docker rm $(sudo docker ps -a -q)
     # Delete all images
-    sudo docker rmi $(sudo docker images -q)
+    # Optional sudo docker rmi $(sudo docker images -q)
     echo "Hasta la vista baby"
 fi
