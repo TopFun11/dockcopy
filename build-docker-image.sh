@@ -1,6 +1,6 @@
  # This will remove any pre-existing container, and then re-create it.
  # You can change 8080 below to a port of your choosing. Change the path to point to wherever your champions-deploy is cloned to.
- PATH_TO_CHAMPIONS_DEPLOY="https://github.com/TopFun11/champions-copy.git"
+ PATH_TO_CHAMPIONS_DEPLOY="C:\Users\DazSc\OneDrive\Documents\GitHub\champions-copy"
  sh make-new-db.sh
  sudo docker stop champions-container
  sudo docker rm champions-container
